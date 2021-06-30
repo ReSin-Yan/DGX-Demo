@@ -62,13 +62,68 @@ sudo cp nvidia-mig-parted /usr/local/bin/
 # MIG-Parted 使用
 MIG-Parted總共有三種指令  
 分別為 apply,export assert  
-apply:指定yaml檔案將目前mig的分配方式按照指定檔按進行設定  
-export:顯示幕前MIG分配詳情  
-assert:指定yaml檔案跟目前mig的分配方式進行比較  
+### apply
+指定yaml檔案將目前mig的分配方式按照指定檔按進行設定  
+可以在一隻檔案中寫入多個config，利用-c 參數來進行選擇
+```
+sudo nvidia-mig-parted apply config.yaml
+```
+```
+sudo nvidia-mig-parted apply config.yaml -c config1
+```
+### export
+顯示幕前MIG分配詳情  
+```
+sudo nvidia-mig-parted export
 
+```
+另外也可以將目前狀態儲存，以共之後復原狀態
+```
+sudo nvidia-mig-parted export > restore.yaml
+
+```
+
+### assert:指定yaml檔案跟目前mig的分配方式進行比較  
+```
+sudo nvidia-mig-assert apply config.yaml
+```
+```
+sudo nvidia-mig-assert apply config.yaml -c config1
+```
 # MIG-Parted 範例
 目前官方提供的exapme有包含DGX的範例，但是其為80GB的設定檔  
 可以透過以下連結獲取40GB的設定檔，內部也是包含原有的80GB範例檔案  
+
+### apply 範例
 ```
 git clone https://github.com/ReSin-Yan/mig-parted.git
+cd mig-parted
+```
+將環境設定成1g.5gb的模式
+```
+sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-1g.5gb-dgx-station-40
+nvidia-smi
+```
+將環境設定成7g.40gb的模式
+```
+sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-7g.40gb-dgx-station-40
+nvidia-smi
+```
+將環境設定成2g.10gb的模式
+```
+sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-2g.10gb-dgx-station-40
+nvidia-smi
+```
+
+### assert 範例
+
+```
+sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-2g.10gb-dgx-station-40
+```
+
+執行完畢之後會自動顯示幕前的環境是否跟yaml檔案內，指定的config相同
+TIPs:會自動修改一個環境參數 $?  
+可以透過
+```
+#echo $?
 ```
