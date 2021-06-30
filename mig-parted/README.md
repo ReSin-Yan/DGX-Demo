@@ -40,7 +40,8 @@ sudo nvidia-smi -i 0,1,2,4 -mig 1
 3. Go Get
 這邊採用最為方便的安裝方式Docker(如果在其他平台需要額外安裝Docker)
 網路需要對外  
-透過docker執行
+範例是透過docker執行  
+其他方式需參考官方文件  
 ```
 sudo docker run \
     -v $(pwd):/dest \
@@ -72,7 +73,7 @@ sudo nvidia-mig-parted apply config.yaml
 sudo nvidia-mig-parted apply config.yaml -c config1
 ```
 ### export
-顯示幕前MIG分配詳情  
+顯示目前MIG配置詳情  
 ```
 sudo nvidia-mig-parted export
 
@@ -93,12 +94,13 @@ sudo nvidia-mig-assert apply config.yaml -c config1
 # MIG-Parted 範例
 目前官方提供的exapme有包含DGX的範例，但是其為80GB的設定檔  
 可以透過以下連結獲取40GB的設定檔，內部也是包含原有的80GB範例檔案  
-
-### apply 範例
+主要更改內容為"gpu filter"以及"config name"  
 ```
 git clone https://github.com/ReSin-Yan/mig-parted.git
 cd mig-parted
 ```
+### apply 範例  
+
 將環境設定成1g.5gb的模式
 ```
 sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-1g.5gb-dgx-station-40
@@ -123,7 +125,9 @@ sudo nvidia-mig-parted apply -f examples/dgx-station-40gb-config.yaml -c all-2g.
 
 執行完畢之後會自動顯示幕前的環境是否跟yaml檔案內，指定的config相同
 TIPs:會自動修改一個環境參數 $?  
-可以透過
+可以透過以下指令顯示
 ```
 #echo $?
 ```
+相同會顯示0  
+不相同會顯示1  
