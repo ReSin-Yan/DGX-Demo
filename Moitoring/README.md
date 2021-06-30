@@ -77,7 +77,7 @@ Dashborad也類似於DockerHub，可以上傳或是下載套件
 選擇來源的Promethues  
 ![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/Grafana%20%E8%A8%AD%E5%AE%9A6.png)  
 
-確認服務
+確認服務  
 ![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/Grafana%20%E8%A8%AD%E5%AE%9A7.png)  
 
 #### 整合Node-export與DCGM-export  
