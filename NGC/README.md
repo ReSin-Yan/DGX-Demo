@@ -2,10 +2,11 @@
 [NVIDIA GPU Cloud(NGC) private registry user guide](https://docs.nvidia.com/ngc/ngc-private-registry-user-guide/ "link")  
  
 # 開始  
-在購買DGX系列或是NGC support service之後，會經由mail收到NVIDIA的權利證書(PDF) 
-透過此權利證書可以進行NGC帳號申請
+在購買DGX系列或是NGC support service之後，會經由mail收到NVIDIA的權利證書(PDF)  
+透過此權利證書可以進行NGC帳號申請  
 可以分為  
 選擇現有帳號以及新建新的帳號  
+圖片  
 ### 登入NGC
 透過以下網址[NVIDIA GPU Cloud(NGC)](https://ngc.nvidia.com/ "link")進行登入  
 輸入帳號密碼之後可以看到  
@@ -19,7 +20,7 @@ NGC帳號分為
 組織之中可以透過 `團隊 ` 來進行細分  
 同一個團隊可以彼此分享各自的內容  
 
-`ORGANIZATION` > `Teams` > 右下角 `+` > `Create Teams`  
+左方工作列表 `ORGANIZATION` > `Teams` > 右下角 `+` > `Create Teams`  
 圖片  
 
 建立完成之後可以在右上角進行Teams切換  
