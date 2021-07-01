@@ -21,19 +21,19 @@ NGC帳號分為
 同一個團隊可以彼此分享各自的內容  
 
 左方工作列表 `ORGANIZATION` > `Teams` > 右下角 `+` > `Create Teams`  
-![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC2.PNG)  
+![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC2.png)  
 
 建立完成之後可以在右上角進行Teams切換  
-![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC3.PNG)  
+![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC3.png)  
 
 ###  環境登入NGC  
 NGC是一個位在雲端的私有倉庫雲  
 使用上噓要進行登入的動作  
 右上角使用者 `setup`  
-![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC4.PNG)  
+![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC4.png)  
 選擇`Generate API Key` > `Get API Key`  
 進入之後點選右上角 `Generate API Key` > 選擇 confirm  
-![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC5.PNG)  
+![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC5.png)  
 之後在server client輸入以下訊息
 
 ```
@@ -64,4 +64,4 @@ sudo docker push nvcr.io/[組織名稱]/[團隊名稱]/[映像檔名稱]:[容器
 ###  查找上傳NGC的images  
 可以從左方工具列`PRIVATE REGISTRY` > `Container`  進入
 根據使用者權限可以看到不同的映像檔  
-![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC6.PNG)  
+![img](https://github.com/ReSin-Yan/DGX-Demo/blob/main/img/NGC6.png)  
