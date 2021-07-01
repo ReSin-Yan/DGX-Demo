@@ -1,7 +1,7 @@
 [NVIDIA GPU Cloud(NGC)](https://ngc.nvidia.com/ "link")  
 [NVIDIA GPU Cloud(NGC) private registry user guide](https://docs.nvidia.com/ngc/ngc-private-registry-user-guide/ "link")  
  
-# 開始  
+# NVIDIA GPU Cloud 上傳使用範例 
 在購買DGX系列或是NGC support service之後，會經由mail收到NVIDIA的權利證書(PDF)  
 透過此權利證書可以進行NGC帳號申請  
 可以分為  
