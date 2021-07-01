@@ -34,7 +34,7 @@ NGC是一個位在雲端的私有倉庫雲
 選擇`Generate API Key` > `Get API Key`  
 進入之後點選右上角 `Generate API Key` > 選擇 confirm  
 
-之後再機器輸入以下訊息
+之後在server client輸入以下訊息
 
 ```
 sudo docker login nvcr.io
