@@ -47,7 +47,7 @@ TIPs:每一組不同的Teams都會有不同的key
 
 ###  下載NGC的images  
 NVIDIA的images接可以透過此種方式進行下載  
-可以從`CATALOG` > `Container` 找到符合自己需求的容器映像檔  
+可以從左方工具列`CATALOG` > `Container` 找到符合自己需求的容器映像檔  
 這邊以CUDA為例  
 ```
 sudo docker pull nvcr.io/nvidia/cuda:11.3.1-base-ubuntu20.04
@@ -56,5 +56,11 @@ sudo docker pull nvcr.io/nvidia/cuda:11.3.1-base-ubuntu20.04
 ###  上傳NGC的images  
 可以將自己建立的images上傳至NGC保存  
 ```
-sudo docker tag nvcr.io/nvidia/cuda:11.3.1-base-ubuntu20.04 nvcr.io/[組織名稱]/[團隊名稱]/[映像檔名稱]:v1
+sudo docker tag nvcr.io/nvidia/cuda:11.3.1-base-ubuntu20.04 nvcr.io/[組織名稱]/[團隊名稱]/[映像檔名稱]:[容器Tag]
+sudo docker push nvcr.io/[組織名稱]/[團隊名稱]/[映像檔名稱]:[容器Tag]
 ```
+
+###  查找上傳NGC的images  
+可以從左方工具列`PRIVATE REGISTRY` > `Container`  進入
+根據使用者權限可以看到不同的映像檔  
+圖片
